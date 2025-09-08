@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio - keerthi B</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #84a6e9;
+        }
+
+        header {
+            background-color: #941919;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .profile-picture {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 70px;
+            left: 70px;
+            border: 3px solid #fff;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .section-content {
+            background-color: #fff;
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./pic.jpg" alt="Profile Picture" class="profile-picture">
+            <h1>Keerthi B</h1>
+            <p>BCA Student | Aspiring Full Stack Developer</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>Hello! I'm <b>Keerthi B</b>, currently pursuing my <b>Bachelor of Computer Applications (2nd Year)</b>. 
+            I'm passionate about <b>web development, problem-solving, and building real-time applications</b>. 
+            I enjoy exploring new technologies, working on creative projects, and continuously learning to improve my skills.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p><b>BCA (2nd Year)</b> – Ongoing</p>
+            <p>Completed School Education</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Full Stack Web Development (MERN)</li>
+                <li>WebRTC & Real-time Communication</li>
+                <li>JavaScript / TypeScript</li>
+                <li>React.js</li>
+                <li>Node.js & Express</li>
+                <li>MongoDB</li>
+                <li>HTML / CSS / Tailwind</li>
+                <li>Basic Java, C++, Python</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="hobbies">
+        <div class="section-content">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Reading books</li>
+                <li>Drawing</li>
+                <li>Listening to music</li>          
+            </ul>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">P2P File Sharing Web App (WebRTC + Socket.IO)</a></li>
+                <li><a href="#">Zoho Books Dummy Project – SIS Homes Realty</a></li>
+                <li><a href="#">Personal Portfolio Website</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content">
+            <center>
+                <h2>Resume</h2>
+                <a href="./mycv.pdf" target="_blank" class="download-button">Download CV</a>
+            </center>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Keerthi B</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
